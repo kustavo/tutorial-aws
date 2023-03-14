@@ -3,22 +3,22 @@
 ## Amazon CloudWatch
 
 - É um serviço da web que permite monitorar e gerenciar várias métricas e configurar ações de alarme com base nos dados dessas métricas.
-- Os serviços da AWS enviam métricas para o *CloudWatch*.
+- Os serviços da AWS enviam métricas para o _CloudWatch_.
     - O CloudWatch usa essas métricas para criar gráficos automaticamente que mostram como o desempenho mudou ao longo do tempo.
 
 ### CloudWatch alarm
 
-- Com o *CloudWatch*, você pode criar alarmes que executam ações automaticamente se o valor de sua métrica estiver acima ou abaixo de um limite predefinido.
+- Com o _CloudWatch_, você pode criar alarmes que executam ações automaticamente se o valor de sua métrica estiver acima ou abaixo de um limite predefinido.
 - Exemplo de aplicação:
     - Suponha que os desenvolvedores de sua empresa usem instâncias do Amazon EC2 para fins de desenvolvimento ou teste de aplicativos. Se os desenvolvedores ocasionalmente esquecerem de parar as instâncias, as instâncias continuarão em execução e incorrerão em cobranças.
-    - Nesse cenário, você pode criar um alarme do *CloudWatch* que interrompa automaticamente uma instância do Amazon EC2 quando a porcentagem de utilização da CPU permanecer abaixo de um determinado limite por um período especificado. 
+    - Nesse cenário, você pode criar um alarme do _CloudWatch_ que interrompa automaticamente uma instância do Amazon EC2 quando a porcentagem de utilização da CPU permanecer abaixo de um determinado limite por um período especificado. 
 - Ao configurar o alarme, você pode especificar para receber uma notificação sempre que este alarme for acionado.
 
 ### CloudWatch dashboard
 
 - Permite acessar todas as métricas de seus recursos em um único local.
 - Exemplo de aplicação:
-    - Você pode usar um painel do *CloudWatch* para monitorar a utilização da CPU de uma instância do Amazon EC2, o número total de solicitações feitas a um bucket do Amazon S3 e muito mais.
+    - Você pode usar um painel do _CloudWatch_ para monitorar a utilização da CPU de uma instância do Amazon EC2, o número total de solicitações feitas a um bucket do Amazon S3 e muito mais.
 - Você pode personalizar dashboards separados para diferentes finalidades de negócios, aplicativos ou recursos.
 
 ## AWS CloudTrail
@@ -26,7 +26,7 @@
 - Registra chamadas de API para sua conta, como um log de ações.
     - As informações registradas incluem a identidade do chamador da API, a hora da chamada da API, o endereço IP de origem do chamador da API e muito mais.
 - Você pode visualizar um histórico completo da atividade do usuário e chamadas de API para seus aplicativos e recursos.
-- Os eventos geralmente são atualizados no *CloudTrail* dentro de **15 minutos** após uma chamada de API.
+- Os eventos geralmente são atualizados no _CloudTrail_ dentro de **15 minutos** após uma chamada de API.
 - Você pode filtrar eventos especificando a hora e a data em que ocorreu uma chamada de API, o usuário que solicitou a ação, o tipo de recurso envolvido na chamada de API e muito mais.
 
 ### CloudTrail Insights
@@ -63,8 +63,13 @@
 ## AWS CloudFormation
 
 - É um serviço que ajuda você a modelar e configurar seus recursos da AWS.
-- Você cria um modelo (em inglês, *template*) que descreve todos os recursos da AWS que você deseja e o CloudFormation cuida do provisionamento e da configuração desses recursos para você.
+- Você cria um modelo (em inglês, _template_) que descreve todos os recursos da AWS que você deseja e o CloudFormation cuida do provisionamento e da configuração desses recursos para você.
 - Não é necessário criar e configurar individualmente os recursos da AWS e descobrir o que depende do que; o CloudFormation lida com isso.
+
+## Quiz
+
+1. Para garantir que todos os recursos da AWS em sua VPC não ultrapassem o limite de serviço. Qual serviço pode ajudar nesta tarefa?
+    - **Resposta**: AWS Trusted Advisor
 
 ## Referências
 
