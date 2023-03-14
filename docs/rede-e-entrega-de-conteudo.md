@@ -24,10 +24,7 @@
 - Permitir que o tráfego público da Internet acesse sua VPC.
 - É uma conexão entre uma VPC e a Internet.
 
-<figure>
-    <img src="../_rede-e-entrega-de-conteudo/internet-gateway.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>Internet gateway</figcaption>
-</figure>
+![Internet gateway - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-internet-gateway.png)
 
 ### Virtual private gateway
 
@@ -36,20 +33,14 @@
 - Permite que você estabeleça uma conexão de rede privada virtual (*Virtual Private Network - VPN*) entre sua VPC e uma rede privada.
 - Permite o tráfego na VPC somente se for proveniente de uma rede aprovada.
 
-<figure>
-    <img src="../_rede-e-entrega-de-conteudo/virtual-private-gateway.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>Virtual private gateway</figcaption>
-</figure>
+![Virtual private gateway - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-virtual-private-gateway.png)
 
 ### AWS Direct Connect
 
 - Permite estabelecer uma conexão privada dedicada entre um data center e uma VPC.
 - A conexão privada fornecida pelo AWS Direct Connect ajuda a reduzir os custos de rede e aumentar a quantidade de largura de banda que pode trafegar pela rede.
 
-<figure>
-    <img src="../_rede-e-entrega-de-conteudo/aws-direct-connect.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>AWS Direct Connect</figcaption>
-</figure>
+![AWS Direct Connect - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-aws-direct-connect.png)
 
 ## Sub-rede
 
@@ -85,10 +76,7 @@
 
 Tanto as ACLs de rede quanto os grupos de segurança permitem que você configure regras personalizadas para o tráfego em sua VPC. À medida que você continua aprendendo mais sobre segurança e rede da AWS, certifique-se de entender as diferenças entre ACLs de rede e grupos de segurança.
 
-<figure>
-    <img src="../_rede-e-entrega-de-conteudo/acl-e-security-group.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>ACLs e Security groups</figcaption>
-</figure>
+![ACLs e Security groups - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-acl-e-security-group.png)
 
 ## Elastic Load Balancing
 
@@ -114,10 +102,7 @@ Tanto as ACLs de rede quanto os grupos de segurança permitem que você configur
 
 O exemplo a seguir descreve como o *Route 53* e o *Amazon CloudFront* trabalham juntos para entregar conteúdo aos clientes.
 
-<figure>
-    <img src="../_rede-e-entrega-de-conteudo/route-53-e-cloud-front.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>Route 53 e o Amazon CloudFront</figcaption>
-</figure>
+![Route 53 e o Amazon CloudFront - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-route-53-e-cloud-front.png)
 
 Suponha que um aplicativo esteja sendo executado em várias instâncias do *Amazon EC2*. Essas instâncias estão em um grupo de *Auto Scaling* que se conecta a um *Application Load Balancer*.
 

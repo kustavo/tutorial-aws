@@ -45,10 +45,7 @@ Um papel/função (*role*) no IAM é uma identidade que você pode criar com per
     - As SCPs permitem que você coloque restrições nos serviços, recursos e ações de API individuais da AWS que usuários e funções em cada conta podem acessar.
     - SCPs podem ser aplicadas a *Organizational Units* e a conta AWS de membros individuais (não confundir com *IAM User*).
 
-<figure>
-    <img src="../_seguranca-e-identidade-e-conformidade/root-e-ou.png" width="100%" title="Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules"/>
-    <figcaption>AWS Organizations - Root e OU</figcaption>
-</figure>
+![AWS Organizations - Root e OU - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/seguranca-root-e-ou.png)
 
 ### Organizational Units
 
