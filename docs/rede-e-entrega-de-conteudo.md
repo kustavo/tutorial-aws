@@ -145,6 +145,9 @@ Suponha que um aplicativo esteja sendo executado em várias instâncias do _Amaz
 1. Para conectar a Amazon Virtual Private Cloud (VPC) à rede local. Qual opção pode ser usada para criar uma conexão privada entre a VPC e a rede local da sua empresa?
     - **Resposta**: AWS Direct Connect
 
+1. Você tem um aplicativo implantado em uma frota de instâncias do EC2 por trás de um _Application Load Balancer_. Você configurou o balanceador de carga para executar verificações de integridade (_health checks_) nessas instâncias do EC2. O que acontecerá se uma dessas instâncias do EC2 falhar nas verificações de integridade (_health checks_)?
+    - **Resposta**: O _Application Load Balancer_ para de enviar tráfego para a instância que falhou em sua verificação de integridade
+
 ## Referências
 
 - <https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules>
