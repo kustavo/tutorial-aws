@@ -31,8 +31,8 @@
 
 ### CloudTrail Insights
 
-- No CloudTrail, você também pode habilitar o CloudTrail Insights.
-- Esse recurso opcional permite que o CloudTrail detecte automaticamente atividades de API incomuns em sua conta da AWS.
+- No _CloudTrail_, você também pode habilitar o _CloudTrail Insights_.
+- Esse recurso opcional permite que o _CloudTrail_ detecte automaticamente atividades de API incomuns em sua conta da AWS.
 - Exemplo de aplicação:
     - Pode detectar que um número maior de instâncias do Amazon EC2 do que o normal foi iniciado recentemente em sua conta.
     - Você pode então revisar os detalhes completos do evento para determinar quais ações você precisa realizar em seguida.
@@ -65,6 +65,52 @@
 - É um serviço que ajuda você a modelar e configurar seus recursos da AWS.
 - Você cria um modelo (em inglês, _template_) que descreve todos os recursos da AWS que você deseja e o CloudFormation cuida do provisionamento e da configuração desses recursos para você.
 - Não é necessário criar e configurar individualmente os recursos da AWS e descobrir o que depende do que; o CloudFormation lida com isso.
+
+## Auto Scaling
+
+### Amazon EC2 Auto Scaling
+
+- Escalona automaticamente instâncias **EC2** conforme necessário.
+- Você pode usar duas abordagens:
+    - Dimensionamento dinâmico (_Dynamic scaling_): responde à demanda em constante mudança.
+    - Dimensionamento preditivo (_Predictive scaling_): agenda automaticamente o número certo de instâncias do Amazon EC2 com base na demanda prevista.
+- Ao configurar o tamanho do _Auto Scaling group_, você pode definir o número mínimo, desejado e máximo de instâncias do Amazon EC2.
+    - Se a quantidade desejada não for definida, será utilizada a quantidade mínima.
+
+### Application Auto Scaling
+
+- O _Application Auto Scaling_ é um serviço da Web para desenvolvedores e administradores de sistemas que precisam de uma solução para escalar automaticamente os recursos escaláveis para serviços individuais da AWS para além do Amazon EC2.
+- O _Application Auto Scaling_ permite que você configure a escalabilidade automática para os seguintes recursos:
+    - Frotas do AppStream 2.0
+    - Réplicas do Aurora
+    - Classificação de documentos e endpoints de reconhecimento de entidade do Amazon Comprehend
+    - Tabelas e índices secundários globais do DynamoDB
+    - Serviços do Amazon Elastic Container Service (ECS)
+    - ElastiCache para clusters Redis (grupos de replicação)
+    - Clusters do Amazon EMR
+    - Tabelas do Amazon Keyspaces (for Apache Cassandra)
+    - Simultaneidade provisionada pela função do Lambda
+    - Armazenamento de agente do Amazon Managed Streaming for Apache Kafka (MSK)
+    - Clusters do Amazon Neptune
+    - Variantes de endpoint do SageMaker
+    - Solicitações de frota spot
+    - Os recursos personalizados fornecidos por seus próprios aplicativos ou serviços.
+
+#### Scheduled scaling (Escalabilidade programada)
+
+- Escalabilidade com base em uma programação
+    - Permite que você defina sua própria programação de escalabilidade de acordo com alterações de carga previsíveis. Por exemplo, vamos supor que toda semana o tráfego para sua aplicação Web comece a aumentar na quarta-feira, permaneça alto na quinta-feira e comece a diminuir na sexta-feira. É possível configurar uma programação para o Application Auto Scaling para aumentar a capacidade na quarta-feira e diminuir a capacidade na sexta-feira.
+
+#### Step scaling (Escalabilidade em etapas)
+
+- Escale um recurso com base em um conjunto de ajustes de escalabilidade que variam de acordo com o tamanho da ruptura do alarme do _CloudWatch_.
+    - Com a escalabilidade em etapas, você escolhe valores de métricas e limites de escalabilidade para os alarmes do _CloudWatch_ que acionam o processo de escalabilidade, além disso, você define como seu destino escalável deve ser escalado quando o limite é a falha para um número especificado de períodos de avaliação.
+
+#### Target tracking scaling (Escalabilidade de monitoramento do objetivo)
+
+- Escale um recurso com base em um valor de destino para uma métrica específica do _CloudWatch_.
+    - Para criar uma política de escalabilidade com monitoramento de objetivo, você especifica uma métrica do _Amazon CloudWatch_ e um valor de objetivo que representa a utilização média ideal ou o nível de _throughput_ para seu aplicativo. Em seguida, o _Application Auto Scaling_ pode aumentar a escala horizontalmente do destino dimensionável (adicionar capacidade) para processar picos de tráfego, e reduzir a escala horizontalmente do destino dimensionável (remover capacidade) para reduzir custos durante períodos de baixa utilização ou throughput.
+    - Por exemplo, digamos que você tenha um aplicativo atualmente executado em uma frota _spot_ e queira que a utilização de CPU da frota permaneça próximo de 50% quando a carga no aplicativo mudar. Isso fornece capacidade extra para lidar com picos de tráfego sem manter um número excessivo de recursos ociosos. Você pode satisfazer essa necessidade criando uma política de escalabilidade com monitoramento de objetivo visando uma utilização média de 50% da CPU. Em seguida, o _Application Auto Scaling_ dimensionará o número de instâncias para manter o valor efetivo da métrica em ou perto de 50%.
 
 ## Quiz
 

@@ -3,7 +3,7 @@
 ## Elastic Compute Cloud (Amazon EC2)
 
 - Ambientes de computação virtual, conhecidos como instâncias.
-- Disponibiliza modelos pré-configurados para suas instâncias, conhecidos como Imagens de máquina da Amazon (*AMIs - Amazon Machine Image*).
+- Disponibiliza modelos pré-configurados para suas instâncias, conhecidos como Imagens de máquina da Amazon (_AMIs - Amazon Machine Image_).
 
 ### Tipos de instâncias
 
@@ -56,18 +56,18 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
     - As instâncias sob demanda não são recomendadas para cargas de trabalho que duram um ano ou mais, devido o custo.
 - **Amazon EC2 Savings Plans**:
     - Os planos de economia permitem que você reduza seus custos de computação comprometendo-se pagar por um plano de **1 ou 3 anos**.
-    - Economias de até 66% em relação aos custos *On-Demand*.
+    - Economias de até 66% em relação aos custos _On-Demand_.
 - **Reserved Instances**:
-    - As instâncias reservadas são um desconto de cobrança aplicado ao uso de instâncias *On-Demand* em sua conta.
+    - As instâncias reservadas são um desconto de cobrança aplicado ao uso de instâncias _On-Demand_ em sua conta.
     - Você pode comprar:
         - **Standard Reserved e Convertible Reserved**: instâncias reservadas padrão e reservadas Conversíveis por um período de 1 ou 3 anos;
         - **Scheduled Reserved**: instâncias Reservadas agendadas por um período de 1 ano.
-    - Ao final de um período de instância reservada, a instância permanece sem interrupção sendo cobradas taxas *On-Demand* até que você faça um dos seguintes:
+    - Ao final de um período de instância reservada, a instância permanece sem interrupção sendo cobradas taxas _On-Demand_ até que você faça um dos seguintes:
         - Encerre a instância.
         - Compre uma nova instância reservada que corresponda aos atributos da instância (tipo de instância, região, locação e plataforma).
 - **Spot Instances**:
     - As instâncias spot são ideais para cargas de trabalho com horários de início e término flexíveis ou que podem suportar interrupções.
-    - Usam a capacidade de computação não utilizada do Amazon EC2 e oferecem economia de custos de até 90% dos preços sob *On-Demand*.
+    - Usam a capacidade de computação não utilizada do Amazon EC2 e oferecem economia de custos de até 90% dos preços sob _On-Demand_.
     - Se a capacidade do Amazon EC2 estiver indisponível, o lançamento aguardará em segundo plano até a disponibilidade.
     - Numa instância spot em execução, se a capacidade não estiver mais disponível ou a demanda por instâncias spot aumentar, sua instância poderá ser interrompida.
 - **Dedicated Hosts**:
@@ -75,18 +75,9 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
     - Você pode usar suas licenças de software existentes por soquete, por núcleo ou por VM para ajudar a manter a conformidade com as licenças.
     - Opção mais cara.
 
-## Amazon EC2 Auto Scaling
-
-- Escalona automaticamente instâncias conforme necessário.
-- Você pode usar duas abordagens:
-    - Dimensionamento dinâmico (*Dynamic scaling*): responde à demanda em constante mudança.
-    - Dimensionamento preditivo (*Predictive scaling*): agenda automaticamente o número certo de instâncias do Amazon EC2 com base na demanda prevista.
-- Ao configurar o tamanho do *Auto Scaling group*, você pode definir o número mínimo, desejado e máximo de instâncias do Amazon EC2.
-    - Se a quantidade desejada não for definida, será utilizada a quantidade mínima.
-
 ## AWS Lambda
 
-- O termo "*serverless*" significa que seu código é executado em servidores, mas você não precisa provisionar ou gerenciar esses servidores.
+- O termo "_serverless_" significa que seu código é executado em servidores, mas você não precisa provisionar ou gerenciar esses servidores.
 - Dimensiona aplicativos sem servidor automaticamente.
 - Pague apenas pelo tempo de computação que você consumir.
 - Uma instância em execução terá no máximo 15 minutos para executar seu trabalho.

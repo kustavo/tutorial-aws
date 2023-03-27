@@ -19,13 +19,17 @@
 - É compatível com bancos de dados relacionais MySQL e PostgreSQL.
 - É até 5x mais rápido que o MySQL padrão e até 3x mais rápido que PostgreSQL padrão.
 - Ajuda a reduzir os custos do banco de dados ao reduzir as operações de entrada/saída (E/S) desnecessárias
-- Considere o *Amazon Aurora* se suas cargas de trabalho exigirem alta disponibilidade.
+- Considere o _Amazon Aurora_ se suas cargas de trabalho exigirem alta disponibilidade.
     - Ele replica seis cópias de seus dados em **três available zones** e faz **backup contínuo** de seus dados no **Amazon S3**.
+- O _Amazon Aurora_ normalmente envolve um cluster de instâncias de banco de dados, em vez de uma única instância. Cada conexão é processada por uma instância de banco de dados específica.
+    - Quando você se conecta a um cluster do _Aurora_, o nome do host e a porta especificados apontam para um processador intermediário chamado endpoint. O _Aurora_ usa o mecanismo de _endpoint_ para abstrair essas conexões. Por isso, você não precisa codificar todos os nomes de host ou escrever a própria lógica para balancear a carga e reorganizar conexões quando algumas instâncias de banco de dados não estão disponíveis.
+- Em determinadas tarefas do _Aurora_, as instâncias ou os grupos diferentes de instâncias realizam funções diferentes. Por exemplo, a instância primária processa todas as instruções Data _Definition Language (DDL)_ e _Data Manipulation Language (DML)_. Até 15 réplicas do _Aurora_ processam tráfego de consulta somente leitura.
+- **Usando endpoints**, mapeie todas as conexões para a instância apropriada ou o grupo de instâncias baseado no caso de uso. Por exemplo, para realizar instruções DDL, conecte-se à instância que seja a primária. Para realizar consultas, conecte-se ao endpoint leitor, com o _Aurora_ realizando automaticamente o balanceamento de carga entre todas as réplicas do _Aurora_. Em clusters com instâncias de banco de dados de capacidades ou configurações diferentes, conecte-se a endpoints personalizados associados a subconjuntos diferentes de instâncias de banco de dados. Para diagnóstico ou ajuste, conecte-se a um endpoint de instância específico para examinar detalhes sobre uma instância de banco de dados específica.
 
 ### Multi-AZ do Amazon RDS com uma instância secundária
 
 - Uma instância RDS secundária é criada em outra AZ e mantida atualizada para caso de interrupção da instância RDS principal.
-- Não é possível usar a instância RDS secundária se a principal está ativa (fica em *standby*).
+- Não é possível usar a instância RDS secundária se a principal está ativa (fica em _standby_).
 
 ## Amazon DynamoDB
 
@@ -75,7 +79,7 @@
 
 ## O Amazon DynamoDB Accelerator (DAX)
 
-- É um cache na memória para o *DynamoDB*.
+- É um cache na memória para o _DynamoDB_.
 - Ajuda a melhorar os tempos de resposta de milissegundos de um dígito para **microssegundos**.
 
 ## Referências
