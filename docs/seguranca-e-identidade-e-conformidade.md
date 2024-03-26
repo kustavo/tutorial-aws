@@ -28,14 +28,24 @@ Gerenciamento da segurança (*security*), identidade (*identity*) e conformidade
 - Use grupos para especificar permissões para um grupo de usuários.
     - Quando você atribui uma política do IAM a um grupo, todos os usuários do grupo recebem as permissões especificadas pela política.
 
-### IAM Policies
+### IAM Policies (Políticas)
 
 - Uma política (*policie*) é um objeto na AWS que define permissões para serviços e recursos da AWS.
 - Pode ser aplicada a usuários (*users*), grupos de usuários (*user groups*) e unidades organizacionais (*OUs - Organizational Units*).
+- Podem ser divididas em:
+    - **Identity Policy**:
+        - **Inline Policy**: Política de 1x1, pode ser aplicada a um usuário ou a uma role, mas não a um grupo.
+        - **AWS Managed ou Customer Managed**: Política que pode ser aplicada a usuários, roles ou grupos.
+    - **Resource Policy**: Política aplicada a um recurso.
 
-### IAM Roles
+### IAM Roles (Funções)
 
 Um papel/função (*role*) no IAM é uma identidade que você pode criar com permissões específicas com credenciais válidas por **curtos períodos**.
+
+### Security Token Service (STS) 
+
+- Usado para criar e fornecer aos usuários confiáveis credenciais de segurança temporárias que podem controlar o acesso aos seus recursos da AWS.
+- Permite criar permissões de acesso entre serviços.
 
 ## AWS Organizations
 
