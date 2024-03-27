@@ -77,43 +77,84 @@
 
 #### S3 Standard
 
-- Para dados acessados ​​com frequência.
+- Armazenamento de uso geral para dados acessados com frequência.
 - Armazena dados em no mínimo **três available zones** de disponibilidade.
 - Oferece alta disponibilidade para objetos.
     - Usado para sites, distribuição de conteúdo e análise de dados.
 - Custo mais alto.
+- Não há cobrança mínima de tempo.
+- Não há cobrança por GB recuperado.
 
 #### S3 Standard-Infrequent Access (S3 Standard-IA)
 
-- Para dados acessados ​​com pouca frequência.
+- Dados acessados com pouca frequência que precisam de acesso em milissegundos.
 - Semelhante ao S3 Standard, mas tem um preço de armazenamento mais baixo e um preço de recuperação mais alto.
 - Ideal para dados acessados ​​com pouca frequência, mas requer alta disponibilidade quando necessário.
 - Armazena dados em no mínimo **três available zones** de disponibilidade.
+- Custo 40% menor em relação ao *S3 Standard*
+- Cobrança mínima de 30 dias.
+- Há cobrança por GB recuperado.
 
 #### S3 One Zone-Infrequent Access (S3 One Zone-IA)
 
+- Dados recriáveis acessados com pouca frequência.
 - Armazena dados em uma **única available zone** de disponibilidade.
 - Tem um preço de armazenamento menor que o *S3 Standard-IA*.
 - Ideal para economizar custos de armazenamento, mas os dados podem ser recuperados em caso de falha.
+- Custo 20% menor em relação ao *S3 Standard-Infrequent Access*
+- Cobrança mínima de 30 dias.
+- Há cobrança por GB recuperado.
+
+#### S3 Express One Zone
+
+- Armazenamento de alta performance para seus dados acessados com mais frequência.
+- Armazena dados em uma **única available zone** de disponibilidade.
+- Latência de solicitação consistente de um dígito em milissegundos.
+- Otimizado para grandes conjuntos de dados com muitos objetos pequenos.
+- Custo 50% menor em relação ao *S3 Standard*
+- Cobrança mínima de 1h.
+- Não há cobrança por GB recuperado.
 
 #### S3 Intelligent-Tiering
 
-- Ideal para dados com padrões de acesso desconhecidos ou em mudança.
+- Economia automática de custos para dados com padrões de acesso desconhecidos ou variáveis.
 - Requer uma pequena taxa mensal de monitoramento e automação por objeto.
 - Os padrões de acesso dos objetos são monitorados.
     - Se o objeto não tiver acesso por **30 dias consecutivos**, será movido para *S3 Standard-IA*.
+    - Se o objeto não tiver acesso por **90 dias consecutivos**, será movido para *Archive Instant Access*.
     - Se o objeto que estava em *S3 Standard-IA* for acessado, será movido para *S3 Standard*.
+- Objetos menores que **128 KB** podem ser armazenados na *S3 Intelligent-Tiering*, mas sempre serão cobrados pelas taxas de camadas de acesso frequente, sem cobrança de monitoramento e automação.
 - A movimentação de objetos entre as classes entra na cobrança de transferências de objetos.
+- Não há cobrança mínima de tempo.
+- Não há cobrança por GB recuperado.
 
-#### S3 Glacier
+#### S3 Glacier Instant Retrieval
 
-- Armazenamento de baixo custo projetado para arquivamento de dados.
+- Dados de longa duração que são acessados algumas vezes por ano com recuperações instantâneas e baixo custo.
+- Recupera objetos em milissegundos com a mesma performance do *S3 Standard*.
+- Custo 68% menor em relação ao *S3 Standard-Infrequent Access*
+- Cobrança mínima de 90 dias.
+- Há cobrança por GB recuperado.
+
+#### S3 Glacier Flexible Retrieval
+
+- Backup e arquivamento de dados que raramente são acessados e baixo custo.
+- Dados de arquivo que são acessados 1 a 2 vezes por ano.
 - Recupera objetos dentro de alguns **minutos a horas**.
+- Custo 10% menor em relação ao *S3 Glacier Instant Retrieval*
+- Cobrança mínima de 90 dias.
+- Há cobrança por GB recuperado.
 
 #### S3 Glacier Deep Archive
 
-- Armazenamento com menor custo, projetado para arquivamento de dados.
+- Arquivamento de dados que são raramente acessados e custo **muito** baixo.
 - Recupera objetos dentro de **12 horas**.
+- Cobrança mínima de 180 dias.
+- Há cobrança por GB recuperado.
+
+#### S3 Outposts
+
+- Oferece armazenamento de objetos para seu ambiente de AWS Outposts on-premises.
 
 ### S3 Transfer Acceleration
 
@@ -128,6 +169,17 @@
 - Veja o que é necessário ao usar o Transfer Acceleration em um bucket do S3:
     - O nome do bucket usado para o Transfer Acceleration deve ser compatível com DNS e não deve conter pontos (".").
     - O Transfer Acceleration deve estar ativado no bucket.
+
+### Transferência de dados
+
+Você paga por toda a largura de banda para dentro e para fora do Amazon S3, **exceto** pelo seguinte:
+
+    - Dados transferidos para a Internet nos primeiros 100 GB por mês, agregados em todos os produtos e regiões da AWS.
+    - Dados transferidos da Internet.
+    - Dados transferidos entre buckets do S3 na mesma região da AWS. 
+    - Dados transferidos de um bucket do Amazon S3 para qualquer serviço da AWS dentro da mesma região AWS que o bucket do S3 (incluindo para uma conta diferente na mesma região da AWS).
+    - Dados transferidos para fora para o Amazon CloudFront (CloudFront).
+
 
 ## Amazon Elastic File System (Amazon EFS)
 
