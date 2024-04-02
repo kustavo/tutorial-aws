@@ -42,7 +42,7 @@ Gerenciamento da segurança (*security*), identidade (*identity*) e conformidade
 
 Um papel/função (*role*) no IAM é uma identidade que você pode criar com permissões específicas com credenciais válidas por **curtos períodos**.
 
-### Security Token Service (STS) 
+### Security Token Service (STS)
 
 - Usado para criar e fornecer aos usuários confiáveis credenciais de segurança temporárias que podem controlar o acesso aos seus recursos da AWS.
 - Permite criar permissões de acesso entre serviços.

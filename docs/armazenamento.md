@@ -47,6 +47,7 @@
 - Armazena dados como **objetos** em *buckets*.
 - Aceita upload de qualquer tipo de arquivo.
 - Oferece espaço de armazenamento ilimitado.
+- Global, não é definida por região.
 - O tamanho máximo de arquivo para um objeto no Amazon S3 é **5 TB**.
 - Para cada arquivo é possível definir permissões para controlar a visibilidade e o acesso a ele.
 - Possui recurso de versão para rastrear alterações em seus objetos ao longo do tempo.
@@ -84,6 +85,13 @@
 - Custo mais alto.
 - Não há cobrança mínima de tempo.
 - Não há cobrança por GB recuperado.
+- 99,999999999% de durabilidade e 99,99% de disponibilidade.
+
+#### Reduced Redundancy Storage (RRS)
+
+- Redundância reduzida: foi criada para dados reproduzíveis não críticos que podem ser armazenados em níveis de redundância menores do que a classe S3 Standard.
+- 99,99% de durabilidade e 99,99% de disponibilidade.
+- **Não mais recomendada, AWS indica a Standard pelo custo benefício**
 
 #### S3 Standard-Infrequent Access (S3 Standard-IA)
 
@@ -180,7 +188,6 @@ Você paga por toda a largura de banda para dentro e para fora do Amazon S3, **e
     - Dados transferidos de um bucket do Amazon S3 para qualquer serviço da AWS dentro da mesma região AWS que o bucket do S3 (incluindo para uma conta diferente na mesma região da AWS).
     - Dados transferidos para fora para o Amazon CloudFront (CloudFront).
 
-
 ## Amazon Elastic File System (Amazon EFS)
 
 - Armazenas dados como **arquivos**.
@@ -195,14 +202,11 @@ Você paga por toda a largura de banda para dentro e para fora do Amazon S3, **e
 
 - O EFS pode ser usado quando você precisar de uma opção de armazenamento de arquivos compartilhados para várias **instâncias do EC2** com **dimensionamento automático de alto desempenho**. Isso o torna um ótimo candidato para armazenamento de arquivos para sistemas de gerenciamento de conteúdo; para operações de elevação e deslocamento, pois seu potencial de escalonamento automático significa que você não precisa rearquitetar; para o desenvolvimento de aplicativos, pois o armazenamento de arquivos compartilháveis do EFS é ideal para armazenar códigos e arquivos de mídia.
 
-### Categoria
+## AWS Storage Gateway
 
-|Classe de armazenamento|Projetado para|Durabilidade (projetada para)|Disponibilidade|Zonas de disponibilidade|Outras considerações|
-|--- |--- |--- |--- |--- |--- |
-|Padrão de EFS|Dados acessados com frequência que exigem a maior durabilidade e disponibilidade.|99,9999999% (11 9)|99,99%|>=3|Nenhum|
-|Padrão EFS - Acesso infrequente (IA)|Dados duradouros e acessados com pouca frequência que exigem a maior durabilidade e disponibilidade.|99,9999999% (11 9)|99,99%|>=3|Taxas de recuperação por GB são aplicáveis.|
-|EFS One Zone|Dados acessados com frequência que não exigem os mais altos níveis de durabilidade e disponibilidade.|99,999999999% (11 anos)|99,90%|1|Não resistente à perda da zona de disponibilidade.|
-|EFS One Zone-IA - IA|Dados duradouros, acessados com pouca frequência, que não exigem os mais altos níveis de durabilidade e disponibilidade.|99,999999999% (11 anos)|99,90%|1|Não resistente à perda da zona de disponibilidade. Taxas de recuperação por GB são aplicáveis.|
+O AWS Storage Gateway é um conjunto de serviços de armazenamento na nuvem híbrida que oferece acesso on-premises a armazenamento virtual na nuvem praticamente ilimitado.
+
+![Diagrama - Fonte: https://aws.amazon.com/pt/storagegateway](assets/storage-gateway-diagram.png)
 
 ## Referências
 

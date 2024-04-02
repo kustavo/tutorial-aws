@@ -55,13 +55,19 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
     - As instâncias são executadas continuamente até que você as interrompa e você paga apenas pelo tempo de computação usado.
     - As instâncias sob demanda não são recomendadas para cargas de trabalho que duram um ano ou mais, devido o custo.
 - **Amazon EC2 Savings Plans**:
-    - Os planos de economia permitem que você reduza seus custos de computação comprometendo-se pagar por um plano de **1 ou 3 anos**.
+    - Possui planos de pacotes de horas por ano.
+    - Possui planos fixos para **1 ou 3 anos**.
     - Economias de até 66% em relação aos custos _On-Demand_.
+    - Oferecem a flexibilidade de alterar família de instancia à medida que suas necessidades evoluem
 - **Reserved Instances**:
+    - AWS recomenda **Savings Plans** pelo custo benefício.
     - As instâncias reservadas são um desconto de cobrança aplicado ao uso de instâncias _On-Demand_ em sua conta.
     - Você pode comprar:
-        - **Standard Reserved e Convertible Reserved**: instâncias reservadas padrão e reservadas Conversíveis por um período de 1 ou 3 anos;
-        - **Scheduled Reserved**: instâncias Reservadas agendadas por um período de 1 ano.
+        - **Standard Reserved**: contratos por um período de **1 ou 3 anos**;
+        - **Convertible Reserved**: contratos por um período de **1 ou 3 anos** e pode alterar família de instancia;
+        - **Scheduled Reserved**:
+            - Lançamento dentro da janela de tempo reservada (fração do dia, semana ou mês).
+            - Instâncias reservadas agendadas por um período de 1 ano.
     - Ao final de um período de instância reservada, a instância permanece sem interrupção sendo cobradas taxas _On-Demand_ até que você faça um dos seguintes:
         - Encerre a instância.
         - Compre uma nova instância reservada que corresponda aos atributos da instância (tipo de instância, região, locação e plataforma).
@@ -70,8 +76,12 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
     - Usam a capacidade de computação não utilizada do Amazon EC2 e oferecem economia de custos de até 90% dos preços sob _On-Demand_.
     - Se a capacidade do Amazon EC2 estiver indisponível, o lançamento aguardará em segundo plano até a disponibilidade.
     - Numa instância spot em execução, se a capacidade não estiver mais disponível ou a demanda por instâncias spot aumentar, sua instância poderá ser interrompida.
+- **Dedicated Instance**:
+    - Continua usando uma instancia (VM)
+    - Mas o hardware não é compartilhado com outras instâncias.
+    - Geralmente usado por instituições que prezam pela máxima segurança de dados.
 - **Dedicated Hosts**:
-    - Hosts dedicados são servidores físicos com capacidade de instância do Amazon EC2 totalmente dedicados ao seu uso.
+    - Usando **servidores físicos** totalmente dedicados ao seu uso.
     - Você pode usar suas licenças de software existentes por soquete, por núcleo ou por VM para ajudar a manter a conformidade com as licenças.
     - Opção mais cara.
 

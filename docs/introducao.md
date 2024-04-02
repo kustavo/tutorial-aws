@@ -25,7 +25,7 @@ Confira um detalhamento rápido dos principais serviços que você vai encontrar
 - **Armazenamento**:
     - **Amazon Glacier**: serviço de armazenamento extremamente barato. Oferece armazenamento rápido e seguro para arquivamento e backup de dados;
     - **Amazon Elastic Block Store (EBS)**: fornece armazenamento em nível de bloco para uso com instâncias do Amazon EC2. Os volumes do Amazon Elastic Block Store são conectados à rede e permanecem independentes da vida útil de uma instância;
-    - **AWS Storage Gateway**: conecta aplicativos de software local com armazenamento baseado em nuvem; oferece integração segura entre a empresa no local e a infraestrutura de armazenamento da AWS.
+    - **AWS Storage Gateway**: O AWS Storage Gateway é um conjunto de serviços de armazenamento na nuvem híbrida que oferece acesso on-premises a armazenamento virtual na nuvem praticamente ilimitado.
 - **Segurança**:
     - **IAM (Gerenciamento de identidade e acesso)**: serviço de segurança em nuvem que ajuda a gerenciar usuários, atribuir políticas, formar grupos para gerenciar vários usuários;
     - **Inspetor**: agente que você pode instalar em suas máquinas virtuais, que reporta quaisquer vulnerabilidades de segurança;
