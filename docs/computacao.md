@@ -56,15 +56,23 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
     - As instâncias sob demanda não são recomendadas para cargas de trabalho que duram um ano ou mais, devido o custo.
 - **Amazon EC2 Savings Plans**:
     - Possui planos de pacotes de horas por ano.
-    - Possui planos fixos para **1 ou 3 anos**.
-    - Economias de até 66% em relação aos custos _On-Demand_.
-    - Oferecem a flexibilidade de alterar família de instancia à medida que suas necessidades evoluem
+    - Contratos por um período de **1 ou 3 anos**.
+    - Planos:
+        - **Compute S.P.**:
+            - Produtos: Fargate, Lambda, EC2.
+            - Pode alterar região, família, tamanho e SO.
+            - Economias de até 66% em relação aos custos _On-Demand_.
+        - **EC2 S.P.**:
+            - Produtos: EC2.
+            - Pode alterar somente tamanho e SO.
+            - Economias de até 72% em relação aos custos _On-Demand_.
 - **Reserved Instances**:
-    - AWS recomenda **Savings Plans** pelo custo benefício.
-    - As instâncias reservadas são um desconto de cobrança aplicado ao uso de instâncias _On-Demand_ em sua conta.
-    - Você pode comprar:
-        - **Standard Reserved**: contratos por um período de **1 ou 3 anos**;
-        - **Convertible Reserved**: contratos por um período de **1 ou 3 anos** e pode alterar família de instancia;
+    - AWS recomenda **EC2 Savings Plans** pelo custo benefício.
+    - Desconto de cobrança aplicado ao uso de instâncias _On-Demand_ em sua conta.
+    - Contratos por um período de **1 ou 3 anos**.
+    - Planos:
+        - **Standard Reserved**: pode mudar somente AZ, tamanho e tipo de rede.
+        - **Convertible Reserved**: pode mudar de AZ, tamanho, tipo de rede, família de instancia, OS.
         - **Scheduled Reserved**:
             - Lançamento dentro da janela de tempo reservada (fração do dia, semana ou mês).
             - Instâncias reservadas agendadas por um período de 1 ano.
