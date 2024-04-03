@@ -109,6 +109,12 @@ O Amazon EC2 oferece uma variedade de opções de preços para diferentes casos 
 - Constrói a versão da plataforma suportada selecionada e provisiona um ou mais recursos da AWS, como instâncias do Amazon EC2, para executar a aplicação.
 - Não há custo adicional para o Elastic Beanstalk. Você paga apenas pelos recursos subjacentes da AWS consumidos pela aplicação.
 
+## Placement Groups (Grupo de posicionamento)
+
+- **Cluster**: agrupa as instâncias em uma zona de disponibilidade. Essa estratégia permite que as workloads atinjam a performance de rede de baixa latência necessária para a comunicação de nó a nó totalmente acoplada que é típica das aplicações de computação de alta performance (HPC).
+- **Partition**: distribui as instâncias entre partições lógicas, de tal modo que as instâncias em uma partição não compartilhem o hardware subjacente com os grupos de instâncias em outras partições. Essa estratégia é normalmente usada por grandes workloads distribuídas e replicadas, como Hadoop, Cassandra e Kafka.
+- **Spread**: posiciona estritamente um pequeno grupo de instâncias no hardware subjacente distinto a fim de reduzir as falhas correlacionadas.
+
 ## Referências
 
 - <https://aws.amazon.com/pt/ec2>
