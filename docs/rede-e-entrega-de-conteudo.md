@@ -1,5 +1,21 @@
 # Rede e Entrega de Conteúdo
 
+## Interfaces de rede
+
+### Elastic Network Interface (ENI)
+
+- Interface de rede mais básica, padrão do EC2.
+
+### Elastic Network Adapter (ENA)
+
+- Interface de rede mais avançada, com maior velocidade.
+- Somente para alguns tipos de instâncias EC2.
+
+### Elastic Fabric Adapter (EFA)
+
+- Interface de alta velocidade para acelerar as aplicações de machine learning e de Computação de Alta Performance (HPC).
+- Somente para alguns tipos de instâncias EC2.
+
 ## Amazon Virtual Private Cloud (Amazon VPC)
 
 - Estabelecer limites em torno de seus recursos da AWS.
@@ -23,8 +39,15 @@
 
 - Permitir que o tráfego público da Internet acesse sua VPC.
 - É uma conexão entre uma VPC e a Internet.
+- Comunicação de 2 vias: sub-rede consegue acessar a internet e a internet acessar a sub-rede.
+- Sub-rede acessa a internet se na Routing Table tiver a rota para 0.0.0.0
 
 ![Internet gateway - Fonte: https://explore.skillbuilder.aws/learn/course/134/play/31418/aws-cloud-practitioner-essentials-all-modules](assets/rede-internet-gateway.png)
+
+### NAT gateway
+
+- Comunicação de 1 via: sub-rede consegue acessar a internet e mas a internet não acessa a sub-rede.
+- Configurada na sub-rede.
 
 ### Virtual private gateway
 
