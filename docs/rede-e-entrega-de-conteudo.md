@@ -18,7 +18,9 @@
 
 ## Amazon Virtual Private Cloud (Amazon VPC)
 
+- VPC são VLANs (Virtual Local Area Network)
 - Estabelecer limites em torno de seus recursos da AWS.
+- Associada a regiões.
 - Permite provisionar uma seção isolada da Nuvem AWS.
 - Você pode iniciar recursos em uma rede virtual que você define.
 - Dentro de uma VPC, você pode organizar seus recursos em sub-redes.
@@ -68,6 +70,7 @@
 ## Sub-rede
 
 - É uma seção de uma VPC na qual você pode agrupar recursos com base em necessidades operacionais ou de segurança.
+- Associada a AZs.
 - Podem ser públicas ou privadas.
     - Sub-redes públicas: contêm recursos que precisam ser acessíveis ao público, como o site de uma loja online.
     - Sub-redes privadas: contêm recursos que devem ser acessíveis apenas por meio de sua rede privada, como um banco de dado.
